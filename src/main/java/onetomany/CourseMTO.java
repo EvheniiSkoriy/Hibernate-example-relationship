@@ -1,10 +1,12 @@
 package onetomany;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "course")
-public class Course {
+public class CourseMTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +20,14 @@ public class Course {
     @JoinColumn(name = "instructor_id")
     private InstructorMTO instructor;
 
-    public Course() {
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JoinColumn(name = "course_id")
+    private List<Review> reviewList;
+
+    public CourseMTO() {
     }
 
-    public Course(String title) {
+    public CourseMTO(String title) {
         this.title = title;
     }
 
@@ -49,9 +55,16 @@ public class Course {
         this.instructor = instructor;
     }
 
+    public void addReview(Review review){
+        if(reviewList ==null){
+            reviewList =new ArrayList<Review>();
+        }
+        reviewList.add(review);
+    }
+
     @Override
     public String toString() {
-        return "Course: " +
+        return "CourseMTO: " +
                 "title: " + title;
     }
 }

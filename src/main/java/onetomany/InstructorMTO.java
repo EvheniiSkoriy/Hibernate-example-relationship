@@ -37,7 +37,7 @@ public class InstructorMTO {
     private InstructorDetail instructorDetail;
 
     @OneToMany(mappedBy = "instructor")
-    private List<Course> courseList;
+    private List<CourseMTO> courseMTOList;
 
     public InstructorMTO(String firstName, String lastName, String email) {
         this.firstName = firstName;
@@ -88,21 +88,21 @@ public class InstructorMTO {
         this.email = email;
     }
 
-    public List<Course> getCourseList() {
-        return courseList;
+    public List<CourseMTO> getCourseMTOList() {
+        return courseMTOList;
     }
 
-    public void setCourseList(List<Course> courseList) {
-        this.courseList = courseList;
+    public void setCourseMTOList(List<CourseMTO> courseMTOList) {
+        this.courseMTOList = courseMTOList;
     }
 
-    public void addCourse(Course course){
-        if(courseList==null){
-            courseList=new ArrayList<Course>();
+    public void addCourse(CourseMTO courseMTO){
+        if(courseMTOList ==null){
+            courseMTOList =new ArrayList<CourseMTO>();
         }
-        courseList.add(course);
+        courseMTOList.add(courseMTO);
 
-        course.setInstructor(this);
+        courseMTO.setInstructor(this);
     }
 
     @Override
@@ -111,6 +111,6 @@ public class InstructorMTO {
                 "id: " + id +
                 ", firstName: " + firstName + '\'' +
                 ", lastName: " + lastName + '\'' +
-                ", email: " + email+ "\n"+courseList;
+                ", email: " + email+ "\n"+ courseMTOList;
     }
 }

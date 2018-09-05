@@ -918,135 +918,168 @@
     <table id="230" parent="2" name="course"/>
     <table id="231" parent="2" name="instructor"/>
     <table id="232" parent="2" name="instructor_detail"/>
-    <table id="233" parent="2" name="student"/>
-    <routine id="234" parent="2" name="StudentsCounts">
+    <table id="233" parent="2" name="review"/>
+    <table id="234" parent="2" name="student"/>
+    <routine id="235" parent="2" name="StudentsCounts">
       <SourceTextLength>59</SourceTextLength>
       <RoutineKind>procedure</RoutineKind>
     </routine>
-    <column id="235" parent="230" name="id">
+    <column id="236" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="230" name="title">
+    <column id="237" parent="230" name="title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="230" name="instructor_id">
+    <column id="238" parent="230" name="instructor_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="238" parent="230" name="instructor_id">
+    <index id="239" parent="230" name="instructor_id">
       <ColNames>instructor_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="239" parent="230" name="PRIMARY">
+    <key id="240" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="240" parent="230" name="course_ibfk_1">
+    <foreign-key id="241" parent="230" name="course_ibfk_1">
       <ColNames>instructor_id</ColNames>
       <RefSchemaName>Students</RefSchemaName>
       <RefTableName>instructor</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="241" parent="231" name="id">
+    <column id="242" parent="231" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="231" name="first_name">
+    <column id="243" parent="231" name="first_name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="231" name="last_name">
+    <column id="244" parent="231" name="last_name">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="231" name="email">
+    <column id="245" parent="231" name="email">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="231" name="instructor_detail_id">
+    <column id="246" parent="231" name="instructor_detail_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="246" parent="231" name="instructor_detail_id">
+    <index id="247" parent="231" name="instructor_detail_id">
       <ColNames>instructor_detail_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="247" parent="231" name="PRIMARY">
+    <key id="248" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="248" parent="231" name="instructor_ibfk_1">
+    <foreign-key id="249" parent="231" name="instructor_ibfk_1">
       <ColNames>instructor_detail_id</ColNames>
       <RefSchemaName>Students</RefSchemaName>
       <RefTableName>instructor_detail</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="249" parent="232" name="id">
+    <column id="250" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="232" name="youtube_chanell">
+    <column id="251" parent="232" name="youtube_chanell">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="232" name="hobby">
+    <column id="252" parent="232" name="hobby">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="252" parent="232" name="PRIMARY">
+    <key id="253" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="233" name="id">
+    <column id="254" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="233" name="first_name">
+    <column id="255" parent="233" name="comment">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="233" name="last_name">
+    <column id="256" parent="233" name="course_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="257" parent="233" name="course_id">
+      <ColNames>course_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="258" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="259" parent="233" name="review_ibfk_1">
+      <ColNames>course_id</ColNames>
+      <RefSchemaName>Students</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="260" parent="234" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="261" parent="234" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="234" name="last_name">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="233" name="email">
+    <column id="263" parent="234" name="email">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="257" parent="233" name="PRIMARY">
+    <key id="264" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <argument id="258" parent="234" name="cnt">
+    <argument id="265" parent="235" name="cnt">
       <Position>1</Position>
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>int(11)|0s</DataType>

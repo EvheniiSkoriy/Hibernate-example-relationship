@@ -24,11 +24,12 @@
 		<!-- Set the current session context -->
 		<property name="current_session_context_class">thread</property>
 
-        <mapping class="onetoone.Student"/>
         <mapping class="onetoone.InstructorDetail"/>
         <mapping class="onetoone.Instructor"/>
         <mapping class="onetomany.InstructorMTO"/>
-        <mapping class="onetomany.Course"/>
+        <mapping class="onetomany.CourseMTO"/>
+        <mapping class="onetomany.Review"/>
+
     </session-factory>
 
 </hibernate-configuration>

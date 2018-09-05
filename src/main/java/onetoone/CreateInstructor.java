@@ -42,7 +42,7 @@ public class CreateInstructor {
                 System.out.println(instructorDetail1.getInstructor());
                 session.getTransaction().commit();
             }else{
-                System.out.println("InstructorMTO not found");
+                System.out.println("Instructor not found");
             }
 
 

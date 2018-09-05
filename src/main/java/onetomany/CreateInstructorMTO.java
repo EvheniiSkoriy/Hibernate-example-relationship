@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 
-public class CreateInstructor {
+public class CreateInstructorMTO {
 
     public static void main(String[] args) {
 
@@ -23,8 +23,8 @@ public class CreateInstructor {
 
             //add new courses to instruction with id = 3
 //            InstructorMTO instructorMTO = session.get(InstructorMTO.class,3);
-//            Course algb = new Course("Algebra");
-//            Course biog = new Course("Biology");
+//            CourseMTO algb = new CourseMTO("Algebra");
+//            CourseMTO biog = new CourseMTO("Biology");
 //
 //            instructorMTO.addCourse(algb);
 //            instructorMTO.addCourse(biog);
@@ -34,7 +34,7 @@ public class CreateInstructor {
 
 
             //delete course with id = 1
-//            Course course=session.get(Course.class,1);
+//            CourseMTO course=session.get(CourseMTO.class,1);
 //            System.out.println("Deleting: "+ course);
 //            session.delete(course);
 //

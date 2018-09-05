@@ -83,7 +83,7 @@ public class Instructor {
 
     @Override
     public String toString() {
-        return "InstructorMTO " +
+        return "Instructor " +
                 "id: " + id +
                 ", firstName: " + firstName + '\'' +
                 ", lastName: " + lastName + '\'' +
